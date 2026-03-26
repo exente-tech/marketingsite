@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Exente LLC</title>
+  <meta
+    name="description"
+    content="Contact Exente LLC for partnership, supplier, and general business inquiries."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand-mark" href="index.html" aria-label="Exente LLC home">
+        <span class="brand-mark__glyph"></span>
+        <span class="brand-mark__text">
+          <strong>Exente LLC</strong>
+          <span>Quiet Infrastructure</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a class="is-active" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="page-hero">
+        <p class="eyebrow">Contact</p>
+        <h1>Business, partnership, and supplier communication</h1>
+        <p>
+          For formal inquiries related to infrastructure, operations, partnerships, or supplier
+          matters, contact the organization using the channels below.
+        </p>
+      </section>
+
+      <section class="section section--contact-layout">
+        <article class="content-card contact-details">
+          <p class="eyebrow">Contact details</p>
+          <h2>Formal business information</h2>
+          <div class="detail-stack">
+            <div>
+              <strong>Exente LLC</strong>
+              <p>7901 4th St N #4738</p>
+              <p>St. Petersburg, FL 33702</p>
+              <p>United States</p>
+            </div>
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:+17273509318">+1 (727) 350-9318</a></p>
+            </div>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:info@exente-tech.com">info@exente-tech.com</a></p>
+            </div>
+            <div>
+              <strong>WhatsApp</strong>
+              <p><a href="https://wa.me/17272761916">+1 (727) 276-1916</a></p>
+            </div>
+            <div>
+              <strong>Business hours</strong>
+              <p>Monday to Friday</p>
+              <p>9:00 AM to 5:00 PM ET</p>
+            </div>
+          </div>
+          <p class="contact-note">We respond to inquiries during standard business hours.</p>
+        </article>
+
+        <div class="section section--contact-form">
+          <div class="section-heading">
+            <p class="eyebrow">Inquiry form</p>
+            <h2>Send a formal message</h2>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <label>
+              Full name
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+            <label>
+              Company
+              <input type="text" name="company" placeholder="Organization name">
+            </label>
+            <label>
+              Email address
+              <input type="email" name="email" placeholder="name@organization.com" required>
+            </label>
+            <label>
+              Inquiry type
+              <select name="inquiryType">
+                <option>General inquiry</option>
+                <option>Partnership</option>
+                <option>Supplier / Vendor</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label class="contact-form__full">
+              Message
+              <textarea name="message" rows="6" placeholder="Describe the nature of your inquiry." required></textarea>
+            </label>
+            <div class="contact-form__full">
+              <button class="button button--primary" id="contact-submit" type="submit">Submit Inquiry</button>
+            </div>
+            <p class="form-status contact-form__full" id="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-meta">
+        <strong>Exente LLC</strong>
+        <p>St. Petersburg, Florida, United States</p>
+        <p><a href="tel:+17273509318">Phone: +1 (727) 350-9318</a></p>
+        <p>Technology systems developed and operated across multiple domains.</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
