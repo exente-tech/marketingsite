@@ -34,25 +34,38 @@ if (contactForm && formStatus) {
     try {
       const response = await fetch("https://email.api.exente-tech.com/v1/public/lead-requests", {
         method: "POST",
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
       });
 
+      let responseData = null;
+      try {
+        responseData = await response.json();
+      } catch (parseError) {
+        responseData = null;
+      }
+
       if (!response.ok) {
         throw new Error(`Request failed with status ${response.status}`);
+      }
+
+      if (responseData && responseData.success === false) {
+        throw new Error(responseData.message || "The API did not accept the inquiry.");
       }
 
       contactForm.reset();
       formStatus.textContent = "Inquiry submitted successfully. We will review it during business hours.";
     } catch (error) {
+      console.error("Inquiry submission failed:", error);
       formStatus.textContent =
         "We could not submit your inquiry right now. Please email info@exente-tech.com or try again shortly.";
     } finally {
       if (contactSubmit) {
         contactSubmit.disabled = false;
-        contactSubmit.textContent = "Submit Inquiry";
+        contactSubmit.textContent = "Send Message";
       }
     }
   });
