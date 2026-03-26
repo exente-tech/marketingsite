@@ -480,6 +480,11 @@ h3 {
   grid-column: 1 / -1;
 }
 
+.contact-form__privacy {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
 .form-status {
   min-height: 1.5rem;
   font-size: 0.95rem;
